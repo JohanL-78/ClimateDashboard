@@ -62,8 +62,9 @@ export default function TemperatureChart({ data, chartType, selectedMonth }) {
               fontSize={12}
               tickLine={false}
               axisLine={false}
-              domain={['dataMin - 0.5', 'dataMax + 0.5']}
-              tickFormatter={(value) => `${value}°C`}
+              domain={[-1, 2]}
+              ticks={[-1, 0, 1, 2]}
+              tickFormatter={(value) => `${value.toFixed(0)}°C`}
             />
             <Tooltip content={<CustomTooltip chartType={chartType} />} />
 
