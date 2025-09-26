@@ -38,17 +38,17 @@ export default function TemperatureChart({ data, chartType, selectedMonth }) {
     : `Temperature Anomalies - ${selectedMonth}`;
 
   return (
-    <div className="bg-white rounded-xl border border-slate-200 shadow-sm p-6">
+    <div className="bg-white rounded-xl border border-slate-200 shadow-sm py-6">
       <div className="mb-6">
-        <h3 className="text-lg font-semibold text-slate-900 mb-2">{title}</h3>
-        <p className="text-sm text-slate-600">
+        <h3 className="text-lg font-semibold text-slate-900 mb-2 px-2">{title}</h3>
+        <p className="text-sm text-slate-600 px-2">
           Temperature deviations from the 1951-1980 reference mean
         </p>
       </div>
 
       <div className="h-96">
         <ResponsiveContainer width="100%" height="100%">
-          <LineChart data={data} margin={{ top: 20, right: 30, left: 20, bottom: 20 }}>
+          <LineChart data={data} margin={{ top: 20, right: 30, left: 2, bottom: 20 }}>
             <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
             <XAxis
               dataKey="year"
