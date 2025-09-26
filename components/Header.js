@@ -15,7 +15,6 @@ export default function Header() {
           Climate Dashboard
         </h1>
 
-        
         <nav className="hidden md:flex gap-4">
           <Link
             href="/"

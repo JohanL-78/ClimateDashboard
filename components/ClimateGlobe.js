@@ -51,8 +51,8 @@ export default function ClimateGlobe() {
             if (globeRef.current) {
               requestAnimationFrame(() => {
                 globeRef.current.pointOfView({
-                  lat: 0,
-                  lng: 0,
+                  lat: 40,
+                  lng: -25,
                   altitude: 3.5
                 }, 0);
               });
