@@ -1,6 +1,7 @@
 import { Inter_Tight } from "next/font/google";
 import "./globals.css";
 import Header from '@/components/Header';
+import { Analytics } from '@vercel/analytics/react';
 
 const interTight = Inter_Tight({
   variable: "--font-inter-tight",
@@ -24,6 +25,7 @@ export default function RootLayout({ children }) {
       <body className={`${interTight.variable} ${interTighter.variable} antialiased bg-stone-200 text-slate-900 min-h-screen font-sans`}>
         <Header />
         <main>{children}</main>
+        <Analytics />
       </body>
     </html>
   );
